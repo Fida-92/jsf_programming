@@ -1,0 +1,28 @@
+
+Using ui:param tag, we can pass parameters to template file or an included file.
+how to pass parameter to a facelet-component (page).
+
+<ui:composition template = "templates/common.xhtml">	
+   <ui:param name = "title" value = "Home" />
+</ui:composition>
+Use parameter : common.xhtml
+<h:body> 
+   <h2>#{title}</h2>
+</h:body>
+
+
+JSF provides the developer with a powerful capability to define own custom tags, which can be used to
+ render custom contents.
+
+Defining a custom
+1a	Create a xhtml file and define contents in it using ui:composition tag
+1b	Create a tag library descriptor (.taglib.xml file) and declares the above custom tag in it.
+1c	Register the tag libray descriptor in web.xml tag in JSF is a three-step process.
+
+        <ui:remove>
+         <h:commandButton value = "Ok" />  
+      </ui:remove>
+      
+      <!--
+         <h:commandButton value = "Cancel" />  
+      -->
