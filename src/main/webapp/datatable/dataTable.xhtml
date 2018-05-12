@@ -55,14 +55,22 @@
                 </h:column>
 
                 <h:column>
-                    <f:facet name = "header">Edit</f:facet>
-                    <h:commandButton value = "Edit" 
-                                     action = "#{userData.editEmployee}" 
+                    <f:facet name = "header">Edeit</f:facet>
+                    <h:commandButton value = "Edidt" 
+                                     action = "#{userData.editEmployee(employee)}" 
                                      rendered = "#{not employee.canEdit}">        
-                        <f:setPropertyActionListener 
-                            target = "#{userData.employees}" value = "#{employee}" />
+                       
                     </h:commandButton>
                 </h:column>
+                 <h:column>
+                    <f:facet name = "header">Delete</f:facet>
+                    <h:commandButton value = "Delete" 
+                                     action = "#{userData.deleteEmployee(employee)}" 
+                                     >        
+                       
+                    </h:commandButton>
+                </h:column>
+
             </h:dataTable>  
             <br/>
 
